@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="drag-and-drop">
+  <head lang="en">
+    <meta charset="utf-8">
+    <title>Drag & Drop: Multiple listsr</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="angular-dragdrop.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div class="row" ng-controller="TshirtController">
+      <div class="col-xs-2 col-md-2">
+        <button type="button" class="btn btn-primary btn-md"><i class="glyphicon glyphicon-search" ng-click=""></i> </button> Choose a t-shirt <br><br>
+        <button type="button" class="btn btn-primary btn-md"><i class="glyphicon glyphicon-thumbs-up"></i> </button> Choose a design <br><br>
+        <button type="button" class="btn btn-primary btn-md"><i class="glyphicon glyphicon-upload"></i> </button> Upload own design <br><br>
+        <button type="button" class="btn btn-primary btn-md"><i class="glyphicon glyphicon-text-size"></i> </button> Add Text <br><br>
+        <button type="button" class="btn btn-primary btn-md"><i class="glyphicon glyphicon-text-size"></i> </button> Quantity and size <br><br>
+      </div>
+      <div class="col-xs-6 col-md-7">
+        <div ng-repeat = "f in selectedView" ng-init="myVar=f.image.front">
+          <img src="{{ myVar }} "/><br>
+          <div ng-repeat="s in shirt" ng-init="view = s.image.front">
+            <button type="button" class="btn btn-default btn-sm" ng-click="$parent.myVar=s.image.front"><img src="{{ s.image.front }}" width="42" height="42"></button> 
+            <button type="button" class="btn btn-default btn-sm" ng-click="$parent.myVar=s.image.back"><img src="{{ s.image.back }}" width="42" height="42"></button>  
+            <button type="button" class="btn btn-default btn-sm" ng-click="$parent.myVar=s.image.right"><img src="{{ s.image.right }}" width="42" height="42"></button> 
+            <button type="button" class="btn btn-default btn-sm" ng-click="$parent.myVar=s.image.left"><img src="{{ s.image.left }}" width="42" height="42"></button> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
