@@ -2,9 +2,19 @@
 <head>
 	<title>Codeigniter 3</title>
 
+	<!-- <meta> -->
+	  	<meta charset="UTF-8" />  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Codrops" />
+       
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="assets/css/bootstrap/3.3.7/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/login/style.css">
+	<link rel="stylesheet" href="assets/css/login/animate-custom.css">
+	 <link rel="shortcut icon" href="assets/css/login/favicon.ico"> 
 
 	<script src="assets/js/jquery/2.1.3/jquery.min.js"></script>
 	<script src="assets/js/bootstrap/3.3.7/bootstrap.min.js"></script>
