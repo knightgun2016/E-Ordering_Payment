@@ -59,21 +59,21 @@ app.controller('ItemController', function(dataFactory,$scope,$http){
 
   $scope.edit = function(id){
     dataFactory.httpRequest('itemsEdit/'+id).then(function(data) {
-      console.log(data);
-        $scope.form = data;
+    	console.log(data);
+      	$scope.form = data;
     });
   }
 
   $scope.saveEdit = function(){
     dataFactory.httpRequest('itemsUpdate/'+$scope.form.id,'PUT',{},$scope.form).then(function(data) {
-        $(".modal").modal("hide");
+      	$(".modal").modal("hide");
         $scope.data = apiModifyTable($scope.data,data.id,data);
     });
   }
 
   $scope.remove = function(item,index){
     var result = confirm("Are you sure delete this item?");
-    if (result) {
+   	if (result) {
       dataFactory.httpRequest('itemsDelete/'+item.id,'DELETE').then(function(data) {
           $scope.data.splice(index,1);
       });
